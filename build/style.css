@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+  /* primary color block */
+  --primary-color-100: hsl(240, 90%, 90%);
+  --primary-color-300: hsl(240, 40%, 60%);
+  --primary-color-600: hsl(240, 60%, 30%);
+  --primary-color-900: hsl(240, 80%, 10%);
+  /* secondary color block NOT USED HERE*/
+  --secondary-color-100: hsl(36, 60%, 30%);
+  --secondary-color-300: hsl(29, 40%, 60%);
+  --secondary-color-600: hsl(36, 60%, 30%);
+  --secondary-color-900: hsl(0, 80%, 10%);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--secondary-color-900);
+  margin: 10px;
+}
+label {
+  background-color: var(--primary-color-300);
+  border-radius: 10px;
+  margin: 0;
+  padding: 0.25rem;
+}
+.choice {
+  background-color: var(--primary-color-100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  height: 150px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: var(--primary-color-100);
+  width: 80%;
+  max-width: 600px;
+}
+.choices {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  color: var(--primary-color-100);
+}
+
+.ingredients h1 {
+  margin-top: 10px;
+}
+
+.ingredients #btn {
+  color: inherit;
+  background-color: var(--primary-color-600);
+  border-radius: 20px;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+}
+
+.ingredients #btn:hover {
+  background-color: var(--primary-color-300);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.cocktail {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  background-color: var(--primary-color-300);
+  text-align: center;
+  color: var(--primary-color-100);
+  margin: 1rem;
+  margin-bottom: 3rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 5px 5px var(--primary-color-100);
+}
+.cocktail h2 {
+  margin-top: 10px;
+  padding: 10px;
+}
+.cocktail img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.cocktailId {
+  margin-bottom: 2rem;
+}
+
+.instructions {
+  background-color: var(--primary-color-100);
+  color: var(--primary-color-600);
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.4s ease-in;
+}
+.cocktail:hover .instructions {
+  transform: translateY(0);
+}
